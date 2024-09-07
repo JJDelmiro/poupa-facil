@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FEEBC6">
+
+    <!-- Área para a imagem no topo -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="212dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/safe" />
+
+    <!-- Valor Inicial com caixa arredondada -->
+    <TextView
+        android:id="@+id/textViewInitialAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Valor Inicial:"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextInitialAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewInitialAmount"
+        android:layout_marginTop="8dp"
+        android:hint="Digite o valor inicial"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_box2"
+        android:textColor="#000000"
+        android:padding="10dp" />
+
+    <!-- Taxa de Juros com caixa arredondada -->
+    <TextView
+        android:id="@+id/textViewInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextInitialAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Taxa de Juros (%):"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextInterestRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewInterestRate"
+        android:layout_marginTop="8dp"
+        android:hint="Digite a taxa de juros"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_box2"
+        android:textColor="#000000"
+        android:padding="10dp" />
+
+    <!-- Período (anos) com caixa arredondada -->
+    <TextView
+        android:id="@+id/textViewTimePeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextInterestRate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Período (anos):"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextTimePeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTimePeriod"
+        android:layout_marginTop="8dp"
+        android:hint="Digite o período"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_box2"
+        android:textColor="#000000"
+        android:padding="10dp" />
+
+    <!-- Botão Calcular aumentado -->
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTimePeriod"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Calcular"
+        android:textSize="18sp"
+        android:backgroundTint="#FDBE43"
+        android:textColor="#000000"
+        android:padding="12dp" />
+
+    <!-- Resultado dentro de uma caixa arredondada -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:background="@drawable/rounded_box"
+        android:textSize="18sp"
+        android:text="Resultado: R$ 0.00"
+        android:textColor="#000000"
+        android:gravity="center" />
+
+</RelativeLayout>
